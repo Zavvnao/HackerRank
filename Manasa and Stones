@@ -1,0 +1,22 @@
+T = int(input())
+
+for i in range(T):
+    total = []
+    steps = int(input())
+    a = int(input())
+    b = int(input())
+    if steps == 0:
+        print(0)
+        continue
+    for j in range(steps):
+        k = steps - 1 - j
+        totalS = k*b + j*a
+        if totalS not in total:
+            total.append(totalS)
+    total.sort()
+    answer = ""
+    for j in range(len(total)):
+        answer += str(total[j]) + " "
+    answer = answer.rstrip()
+    print(answer)
+    

@@ -1,0 +1,13 @@
+T, M = str(input()).split()
+T = int(T)
+M = int(M)
+total = 0
+
+for i in range(M):
+    a, b, k = str(input()).split()
+    a = int(a)
+    b = int(b)
+    k = int(k)
+    total += (b-a+1)*k
+
+print (int(total/T))

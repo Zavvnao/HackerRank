@@ -1,0 +1,20 @@
+T = int(input())
+
+for i in range(T):
+    N,C,M = str(input()).split()
+    M = int(M)
+    N = int(N)
+    C = int(C)
+    answer = 0
+    # Compute Answer
+    purchased = int(N/C)
+    subtotal = 0
+    if purchased >= M:
+        tradable = purchased
+        while tradable >= M:
+            traded = int(tradable/M)
+            remainder = tradable%M
+            tradable = traded + remainder
+            subtotal += traded
+    answer = purchased + subtotal
+    print(answer)

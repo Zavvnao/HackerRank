@@ -1,0 +1,16 @@
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    if N % 3 == 1:
+        if N >= 10:
+            print("5"*(N-10) + "3"*10)
+        else:
+            print("-1")
+    elif N % 3 == 2:
+        if N >= 5:
+            print("5"*(N-5) + "3"*5)
+        else:
+            print("-1")
+    else:
+        print("5"*N)

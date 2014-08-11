@@ -1,0 +1,17 @@
+string = input().rstrip()
+length = len(string)
+alphabets = {}
+
+for x in range(length):
+    if string[x] not in alphabets:
+        alphabets[string[x]] = 1
+    else:
+        alphabets[string[x]] += 1
+counter = 0
+for each in alphabets.keys():
+    if alphabets[each] % 2 > 0:
+        counter += 1
+if counter > 1:
+    print("NO")
+else:
+    print("YES")
